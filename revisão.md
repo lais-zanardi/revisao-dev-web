@@ -105,3 +105,9 @@ app = Flask (__name__)
 
 @app.route("/")
 ```
+
+### Instalação do Flask
+1. Verifique se tem o python instalado: `python --version`
+2. Crie um ambiente virtual: `python -m venv venv`
+📢 A pasta venv não deve ser subida no repositório. Para isso, adicione ao .gitignore.
+3. 

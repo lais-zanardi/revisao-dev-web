@@ -1,0 +1,30 @@
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: #f1f1f1;
+}
+
+header {
+    display: grid;
+    grid-column: 1 / span 2;
+    background-color: tan;
+}
+
+aside {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    background-color: rgb(205, 150, 79);
+}
+
+main {
+    display: grid;
+    grid-column: 2/3;
+    background-color: rgb(208, 132, 34);
+}
+
+footer {
+    display: grid;
+    grid-column: 2/3;
+    background-color: rgb(210, 169, 114);
+}
