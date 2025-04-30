@@ -67,5 +67,41 @@ Exemplo de css inline:
 </body>
 </html>
 ```
-## Flexbox 
-## Grid
+## Flexbox x Grid
+TODO: explicar quando usar cada um e atributos de cada
+
+### Flexbox
+
+### Grid
+No arquivo .css use `display: grid` para atribuir ao elemento e aos seus filhos essa configuração.
+Opções para criar número de colunas:
+- `grid-template-columns: auto auto auto`: cria três colunas de tamanhos iguais;
+- `grid-template-columns: 1fr 2fr 1fr`: cria três colunas, sendo a segunda 2x maior do que as primeira e terceira;
+- `grid-template-columns: 20% auto auto`: cria três colunas, com a primeira fixada em 20% e as demais ajustam automaticamente a área disponível;
+- `grid-column: 1/3`: elemento inicia na linha 1 de coluna e termina na linha 3 de coluna
+- `grid-column: 1/span 2`: elemento inicia na linha um e termina em mais duas linhas
+
+Para linhas a lógica é a mesma, só altere o comando de `column` para `row`;
+
+### Exemplo desenvolvido
+![alt text](image.png)
+
+## Usando o Flask
+Abra o terminal `(ctrl + ")`
+Crie a estrutura de organização padrão do Flask. 
+|-- static
+|   |-- style.css
+|
+|-- templates
+|   |--index.html
+|
+|-- app.py
+
+### app.py
+```
+from flask import Flask
+
+app = Flask (__name__)
+
+@app.route("/")
+```
