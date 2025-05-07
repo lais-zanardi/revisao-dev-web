@@ -88,7 +88,8 @@ Para linhas a lógica é a mesma, só altere o comando de `column` para `row`;
 
 ## Usando o Flask
 Abra o terminal `(ctrl + ")`
-Crie a estrutura de organização padrão do Flask. 
+Crie a estrutura de organização padrão do Flask.
+``` 
 |-- static
 |   |-- style.css
 |
@@ -96,7 +97,7 @@ Crie a estrutura de organização padrão do Flask.
 |   |--index.html
 |
 |-- app.py
-
+```
 ### app.py
 ```
 from flask import Flask
@@ -135,7 +136,7 @@ def home():
  6. Configure o armazenamento para no mínimo 25GB. A versão gratuita permite até 30GB;
  7. Execute a instância.
 
- ### Conecte à instância
+ #### Conecte à instância
 1.  No Windows Powershell navegue até o diretório que contém o arquivo .pem.
 2. No navegador, clique na instância desejada, copie o comando na aba 'Cliente SSH' e cole no powershell com o botão direito. Depois digite `yes` para permitir.
 3. Caso de erro, baixe o `Bitvise SSH Client` (Solução para Windows).
@@ -145,3 +146,28 @@ def home():
  - Initial method: publickey
  - Selecione ´Cliente key manager` > import > selecione o arquivo .pem e importe a chave.
  Clique em Log in para iniciar, aceita e salva.
+
+ ## Criando um projeto com Flask na instância da AWS
+No Powershell, conecte-se a instância.
+- `pwd`: exibe o caminho do diretório atual
+- `git clone <link-do-repositorio>`: clona o repositório do projeto
+- `cd <nome-da-pasta>`: navega para a pasta do projeto
+- `sudo su`: altera para usuário root identificado pela `#` (administrador)
+- `exit`: sai do modo usuário root
+- `sudo apt update`: atualiza os pacotes
+- `python3 --version`: verifica versão do Python
+- `python3 -m venv venv`: cria a máquina virtual
+- `sudo apt install python3.12-venv`: instala pacote para criação da venv
+- `history`: exibe o histórico de comandos
+- `!<número-da-linha>`: executa novamente o comando
+- `mkdir <nome-da-pasta>`: cria uma nova pasta
+- `ls`: exibe os itens do diretório
+- `touch <nome-do-arquivo>`: cria novo arquivo (pode ser combinado para ser criado já dentro do repositório desejado ex.: touch templates/index.html cria um arquivo .html dentro da pasta templates)
+- `source venv/bin/activate`: ativa máquina virtual
+- `deactivate`: desativa máquina virtual
+- `pip3 install flask pymysql`: instala o flask (com a MV ativada!) e o mySQL.
+- `pip3 freeze > requirements.txt`: retorna um arquivo .txt com as dependencias instaladas na MV
+- `pip3 install -r requirements.txt`: instala as bibliotecas do arquivo .txt
+- `nano templates/index.html`: edita o arquivo .html no nano
+- `cat ../<nome-da-pasta>/<nome-da-outra-pasta>/<arquivo-x.html> > /home/ubuntu/flask/templates/index.html`: copia o arquivo-x.html para o index.html
+- `echo "from flask import Flask" > app.py`: retorna uma saída de texto no arquivo app.py
