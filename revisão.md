@@ -119,3 +119,29 @@ def home():
 6. Uma vez instalado é possível ver os itens com `pip freeze`
 7. Gere um arquivo .txt com os requisitos para o funcionamento do projeto: `pip freeze > requirements.txt`
 8. Caso você esteja usando um projeto que já possui o arquivo requirements.txt faça a instalação no ambiente virtual ativado com: `pip install -r .\requirements.txt`
+
+## AWS
+📢 Acesse a conta de estudante pelo link do e-mail.
+
+### Serviço de computação EC2
+ É um serviço de computação em nuvem que permite aos usuários alugarem computadores virtuais (instâncias) para rodar seus próprios aplicativos. 
+
+ #### Executando uma nova instância
+ 1. Dê um nome a instância;
+ 2. Selecione a imagem e SO;
+ 3. Selecione o tipo de instância. 1GB é suficiente para rodar o Flask;
+ 4. A comunicação entre a sua máquina e a AWS é feita via terminal (cli) através do protocolo SSH (Secure Shell) que usa por padrão a porta 22/TCP. Então crie um par de chaves para conectar-se a instância;
+ 5. Em configurações de rede selecione todas as checkboxs.
+ 6. Configure o armazenamento para no mínimo 25GB. A versão gratuita permite até 30GB;
+ 7. Execute a instância.
+
+ ### Conecte à instância
+1.  No Windows Powershell navegue até o diretório que contém o arquivo .pem.
+2. No navegador, clique na instância desejada, copie o comando na aba 'Cliente SSH' e cole no powershell com o botão direito. Depois digite `yes` para permitir.
+3. Caso de erro, baixe o `Bitvise SSH Client` (Solução para Windows).
+ - Após a instalação, copie o `Endereço IPv4 público` da instância e cole no campo `Host`.
+ - Port: 22
+ - Username: ubuntu
+ - Initial method: publickey
+ - Selecione ´Cliente key manager` > import > selecione o arquivo .pem e importe a chave.
+ Clique em Log in para iniciar, aceita e salva.
