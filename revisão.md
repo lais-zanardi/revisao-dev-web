@@ -171,3 +171,16 @@ No Powershell, conecte-se a instância.
 - `nano templates/index.html`: edita o arquivo .html no nano
 - `cat ../<nome-da-pasta>/<nome-da-outra-pasta>/<arquivo-x.html> > /home/ubuntu/flask/templates/index.html`: copia o arquivo-x.html para o index.html
 - `echo "from flask import Flask" > app.py`: retorna uma saída de texto no arquivo app.py
+- `flask run --host=0.0.0.0`: roda localmente e na aws
+
+## Criando um bd mysql e conectando a instância aws
+- `sudo apt-cache search mysql-server`:
+- `sudo apt install mysql-server-8.0 -y`:
+- `sudo /etc/init.d/mysql status uc`
+- `sudo /etc/init.d/mysql start`
+- `mysql -u root -p`:
+- cd /etc/mysql/
+- cd mysql.conf.d/
+cat mysqld.conf > mysqld.conf.original
+namo mysql.cnf
+diff mysql.nf 
